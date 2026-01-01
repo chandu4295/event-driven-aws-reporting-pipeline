@@ -13,19 +13,16 @@ variable "environment" {
 variable "raw_data_bucket_name" {
   description = "S3 bucket for raw event data"
   type        = string
-  default     = "event-pipeline-raw-data-${data.aws_caller_identity.current.account_id}"
 }
 
 variable "athena_output_bucket_name" {
   description = "S3 bucket for Athena query results"
   type        = string
-  default     = "event-pipeline-athena-output-${data.aws_caller_identity.current.account_id}"
 }
 
 variable "reports_bucket_name" {
   description = "S3 bucket for daily reports"
   type        = string
-  default     = "event-pipeline-reports-${data.aws_caller_identity.current.account_id}"
 }
 
 variable "athena_database" {
